@@ -34,11 +34,16 @@ There is a very comprehensive and easy to use library, [TMCStepper](https://gith
 
 - The SD card and drivers share the same SPI data lines. There is one SS for the SD and one SS for all of the drivers. 
 - If you use less than (4) drivers, you need to jumper MOSI to MISO on the missing drivers to close the daisy chain loop.
-- You can connect the DIAG1 pin of the drivers to the limit switches using jumpers JP1-JP5. Be sure to remove only one type of limit switch at a time.
+- You can connect the DIAG1 pin of the drivers to the limit switches using jumpers JP1-JP4. Be sure to remove only one type of limit switch at a time.
 - Source files
   - [Schematic (PDF)](https://github.com/bdring/4_Axis_SPI_CNC/blob/master/docs/SPI_4Axis_V1_Schm.pdf)
   - [Source Files (DipTrace)](https://github.com/bdring/4_Axis_SPI_CNC/tree/master/source/DipTrace)
   - [Gerbers](https://github.com/bdring/4_Axis_SPI_CNC/tree/master/source/Gerber)
+  
+### Plug In Modules
+
+ - ESP32: The PCB uses ESP32 Dev Modules. It uses the 2 x 19 pin types with pin widths of either 0.9" or 1.0". 
+ - Motor Drivers: It uses stepstick style stepper motor drivers with Trinamic SPI drivers. It has extra large capacitors.
 
 ### Firmware
 
