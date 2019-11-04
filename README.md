@@ -2,6 +2,8 @@
 
 # A 4 axis ESP32 CNC controller for daisy chained SPI stepper drivers.
 
+![](https://github.com/bdring/4_Axis_SPI_CNC/blob/master/docs/images/20190731_165601.jpg)
+
 ### Trinamic Drivers
 
 [Trinamic SPI stepper motor drivers](https://www.trinamic.com/products/integrated-circuits/) are great. They have dozens of features not found on traditional small stepper drivers. You can't control all the features via configuration pins, like the MS1, MS2 and MS3 traditionally used to select microstepping. They use SPI to setup and control the features. 
@@ -16,7 +18,7 @@ Most SPI devices can be used in a daisy chain mode (see image). As bits are rece
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/SPI_three_slaves_daisy_chained.svg/700px-SPI_three_slaves_daisy_chained.svg.png)
 
-There is a very comprehensive and easy to use library, TMCStepper, for SPI control, but it does not support daisy chaining. I created a fork that has a basic ability to write to any driver in an SPI daisy chain. It does not support reading data yet.
+There is a very comprehensive and easy to use library, [TMCStepper](https://github.com/teemuatlut/TMCStepper), for SPI control, but it does not support daisy chaining. I created a fork that has a basic ability to write to any driver in an SPI daisy chain. It does not support reading data yet.
 
 ### Helping with the project.
 
@@ -32,11 +34,16 @@ There is a very comprehensive and easy to use library, TMCStepper, for SPI contr
 
 - The SD card and drivers share the same SPI data lines. There is one SS for the SD and one SS for all of the drivers. 
 - If you use less than (4) drivers, you need to jumper MOSI to MISO on the missing drivers to close the daisy chain loop.
-- You can connect the DIAG1 pin of the drivers to the limit switches using jumpers JP1-JP5. Be sure to remove only one type of limit switch at a time.
+- You can connect the DIAG1 pin of the drivers to the limit switches using jumpers JP1-JP4. Be sure to remove only one type of limit switch at a time.
 - Source files
-  - Schematic (PDF)
-  - Source Files (DipTrace)
-  - Gerbers
+  - [Schematic (PDF)](https://github.com/bdring/4_Axis_SPI_CNC/blob/master/docs/SPI_4Axis_V1_Schm.pdf)
+  - [Source Files (DipTrace)](https://github.com/bdring/4_Axis_SPI_CNC/tree/master/source/DipTrace)
+  - [Gerbers](https://github.com/bdring/4_Axis_SPI_CNC/tree/master/source/Gerber)
+  
+### Plug In Modules
+
+ - ESP32: The PCB uses ESP32 Dev Modules. It uses the 2 x 19 pin types with pin widths of either 0.9" or 1.0". 
+ - Motor Drivers: It uses stepstick style stepper motor drivers with Trinamic SPI drivers. It has extra large capacitors.
 
 ### Firmware
 
