@@ -49,6 +49,13 @@ There is a very comprehensive and easy to use library, TMCStepper, for SPI contr
 
 Note: Obviously, external I/O expanders can be used increase I/O pin count. This project is focused on using only the I/O on the ESP32.
 
+### Revision History
+
+- **V1p2**
+  - Added bypass jumper for 4th axis. Install jumper if 4th axis is not used. Normally the daisy chained SPI has to go through that axis.
+  - Added 10uF optional capacitor to help with ESP32 modules that have trouble entering bootloader mode. This is not installed by default.
+  - Added extra ground connection that TMC5160 drivers need. It is N/C on many other TMC drivers.
+
 ### Donation
 
 This project represents a lot of work. Please consider a safe, secure and highly appreciated donation via the PayPal link below.
