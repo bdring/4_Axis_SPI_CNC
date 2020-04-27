@@ -20,16 +20,6 @@ Most SPI devices can be used in a daisy chain mode (see image). As bits are rece
 
 There is a very comprehensive and easy to use library, [TMCStepper](https://github.com/teemuatlut/TMCStepper), for SPI control, but it does not support daisy chaining. I created a fork that has a basic ability to write to any driver in an SPI daisy chain. It does not support reading data yet.
 
-### Helping with the project.
-
- If you have experience with basic SPI and Trinamic Stepper Drivers, have a history of GitHub contributions  and would like to contribute to this project, I might be able to send you a controller for the cost of shipping. You would need to supply the ESP32 and stepper drivers. If you are interested, please let me know.
-
-### Roadmap
-
-- Reading from daisy chained SPI devices
-- Shadow registers for multiple devices
-- Mixed slave types. (Allow different )
-
 ### Notes about the controller
 
 - The SD card and drivers share the same SPI data lines. There is one SS for the SD and one SS for all of the drivers. 
@@ -47,9 +37,7 @@ There is a very comprehensive and easy to use library, [TMCStepper](https://gith
 
 ### Firmware
 
-- Currently yo need to [use this fork of Grbl_ESP32](https://github.com/bdring/Grbl_Esp32/tree/TMCStepper)
-- [Use this fork of the TMCStepper library](https://github.com/bdring/TMCStepper) 
-
+- Use [Grbl_ESP32](https://github.com/bdring/Grbl_Esp32) with [spi_daisy_4axis.h](https://github.com/bdring/Grbl_Esp32/blob/master/Grbl_Esp32/Machines/spi_daisy_4axis.h) machine file
 
 
 ### I/O Expanders
