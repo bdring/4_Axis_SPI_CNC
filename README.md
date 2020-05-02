@@ -26,9 +26,9 @@ There is a very comprehensive and easy to use library, [TMCStepper](https://gith
 - If you use less than (4) drivers, you need to jumper MOSI to MISO on the missing drivers to close the daisy chain loop.
 - You can connect the DIAG1 pin of the drivers to the limit switches using jumpers JP1-JP4. Be sure to remove only one type of limit switch at a time.
 - Source files
-  - [Schematic (PDF)](https://github.com/bdring/4_Axis_SPI_CNC/blob/master/docs/SPI_4Axis_V1_Schm.pdf)
-  - [Source Files (DipTrace)](https://github.com/bdring/4_Axis_SPI_CNC/tree/master/source/DipTrace)
-  - [Gerbers](https://github.com/bdring/4_Axis_SPI_CNC/tree/master/source/Gerber)
+  - [Schematic (PDF)](https://github.com/bdring/4_Axis_SPI_CNC/blob/master/docs/1p3/SPI_4Axis_V1p3_Schm.pdf)
+  - [Source Files (DipTrace)](https://github.com/bdring/4_Axis_SPI_CNC/tree/master/source/1p3/DipTrace)
+  - [Gerbers](https://github.com/bdring/4_Axis_SPI_CNC/tree/master/source/1p3/Gerber)
   
 ### Plug In Modules
 
